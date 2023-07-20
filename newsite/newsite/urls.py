@@ -17,12 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-app_name = "login"
+#app_name = "login"
 urlpatterns = [
     path("login/", include("django.contrib.auth.urls")),
     path('', include('login.urls')),
     path("login/", include("login.urls")),
     path("home/", include("login.urls")),
+    path("projects/", include("projects.urls")),
     path('admin/', admin.site.urls),
-    
 ]

@@ -12,10 +12,10 @@ def login_user(request):
         if user is not None:
             login(request, user)
             # Redirect to a success page.
-            return redirect('base')
+            return redirect('projects')
         else:
         # Return an 'invalid login' error message.
-            messages.success(request, ("There was an error. Please Try Again :("))
+            messages.success(request, 'There was an error. Please Try Again :(')
             return redirect('login')
     else:
         return render(request, 'authenticate/login.html', {})
@@ -47,4 +47,4 @@ def signup_user(request):
     })
     
 def home(request):
-    return render(request, 'authenticate/home.html',{})
+    return render(request, 'projects/projects.html',{})
