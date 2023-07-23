@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:400,700);
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +22,7 @@
             flex-direction: column;
     border-radius: 4px;
     box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
   }
   .login-form h1 {
     padding: 35px 35px 0 35px;
@@ -107,29 +109,29 @@
     background: #3c4d6d;
   }
 
-  /* ALERT WARNING Bs css */
-  .alert {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-  }
+ /* ALERT WARNING Bs css */
+ .alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
 
-  .alert-dismissable,
+.alert-dismissable,
 .alert-dismissible {
-  padding-right: 35px;
+padding-right: 35px;
 }
 
 .alert-dismissable .close,
 .alert-dismissible .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  color: inherit;
+position: relative;
+top: -2px;
+right: -21px;
+color: inherit;
 }
 
 .alert-warning {
-  background-color: #fcf8e3;
-  border-color: #faebcc;
-  color: #8a6d3b;
+background-color: #fcf8e3;
+border-color: #faebcc;
+color: #8a6d3b;
 }

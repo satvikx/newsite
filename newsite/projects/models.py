@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 class User(models.Model):
     first_name = models.CharField('First Name', max_length=30)
@@ -13,7 +14,8 @@ class Project(models.Model):
     name = models.CharField('Project Name', max_length=120)
     points = models.IntegerField(default=0)
     description = models.TextField(blank=True)
-    due_date = models.DateTimeField('Due Date', blank = True)
+    date = models.DateTimeField('Date', blank = True, default=timezone.now)
+    due_date = models.DateField('Due Date', blank = True)
     users = models.ManyToManyField(User, blank=True)
 
     def __str__(self):

@@ -1,0 +1,29 @@
+{% extends 'authenticate/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html> 
+    <html lang="en" >
+    <head>
+    <meta charset="UTF-8">
+    <title>Add Projects</title>
+    <link rel="stylesheet" href="{% static 'projects/add_styles.css' %}">
+    </head>
+    <body>
+        <div class="container">  
+            {% if submitted %}
+            Your Form was Submitted Successfully!!
+            {% else %}
+            <form id="add-project" action="" method="post">
+                {% csrf_token %}
+            <h3>Add Projects</h3>
+            <h4>Let's add a new Project</h4>
+            {{form.as_p}}
+            <fieldset>
+                <button name="submit" type="submit" value='Submit' id="add-project-submit" data-submit="...Sending">Submit</button>
+            </fieldset>
+            </form>
+            {% endif %}
+        </div>
+    </body>
+</html>
+{% endblock  %}

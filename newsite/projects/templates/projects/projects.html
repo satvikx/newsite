@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="{% static 'projects/styles.css' %}">
     </head>
     <body>
+        <div class="project-container">
         {% for project in project_list %}
-        <div class="product-card">
-            <div class="badge">
-                &#9889; * {{ project.points }}</div>
-            <div class="product-tumb">
-                <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+        <div class="project-card">
+            <div class="points">
+                &#9889; * {{ project.points }}
+            </div>
+            <div class="project-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg" alt="">
             </div>
             <div class="product-details">
                 <span class="product-catagory"> 
@@ -27,19 +29,20 @@
                 <p> 
                     {{ project.description }} 
                 </p>
-                <div class="product-bottom-details">
-                    <div class="product-price">
-                        {{ project.due_date }} 
+                <div class="project-bottom-details">
+                    <div class="project-date">
+                        Date Added - <br />&nbsp;<br/>
+                        <div class ="date">{{ project.date }} </div><br />&nbsp;<br/>
                     </div>
-                    <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                    <div class="project-date">
+                        Deadline - <br />&nbsp;<br/>
+                        <div class ="date">{{ project.due_date }} </div>
                     </div>
                 </div>
             </div>
         </div>
         {% endfor %}
-
+    </div>
 </body>
 </html>
 {% endblock  %}

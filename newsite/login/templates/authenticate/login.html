@@ -6,7 +6,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Login Form</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
   <link rel="stylesheet" href="{% static 'login/styles.css' %}">
 </head>
 <body>
@@ -14,16 +13,11 @@
 <div class="container">
   {% if messages %}
     {% for message in messages %}
-      <div class="alert alert-warning alert-dismissible fade in" role="alert">
-        
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <div class="alert alert-warning alert-dismissible fade in" role="alert" id="d1">
         {{ message }}
       </div>
     {% endfor %}
   {% endif %}
-
 </div>
 <div class="login-form">
   <form action="" method = POST>
