@@ -1,0 +1,53 @@
+{% extends 'authenticate/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html> 
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SignUp Form</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
+  <link rel="stylesheet" href="{% static 'login/styles.css' %}">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+</div>
+<div class="login-form">
+  <form action="" method = POST>
+    {% csrf_token %}
+    <h1>SignUp</h1>
+    <div class="content">
+      
+      <div class="input-field">
+        <input type="text" placeholder="First Name" autocomplete="nope" name="first_name">
+      </div>
+      <div class="input-field">
+        <input type="text" placeholder="Last Name" autocomplete="nope" name="last_name">
+      </div>
+      <div class="input-field">
+        <input type="text" placeholder="Username" autocomplete="nope" name="username">
+      </div>
+      <div class="input-field">
+        <input type="password" placeholder="Password" autocomplete="new-password" name="password1">
+      </div>
+      <div class="input-field">
+        <input type="password" placeholder="Re-enter Password" autocomplete="new-password" name="password2">
+      </div>
+    <div class="action">
+      <button id='p1' type='submit' value='Register'>Sign Up</button>
+    </div>
+  </form>
+</div>
+
+</body>
+{% endblock %}
+</html>
